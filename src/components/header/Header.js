@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import angleArrow from "../../Assets/Pop Out Arrow";
 import ImprintDigitalLogo from "../../Assets/ImprintDigitalLogo";
 import "./Header.scss";
-import "../../index.css";
+import "../../index.scss";
 
 export const Header = () => {
   const [showServices, setShowServices] = useState(false);
   return (
-    <section id="header">
+    <main id="header">
       <nav>
         <div className="nav-item logo">{ImprintDigitalLogo}</div>
         <button
@@ -32,7 +32,7 @@ export const Header = () => {
         <button class="nav-item boxed">Contact {angleArrow}</button>
         {/* <button class="nav-item drop-down"></button> */}
       </nav>
-      <div
+      <section
         id="dropdown"
         class={`${showServices ? "visible" : "invisible"}`}
         onMouseEnter={() => setShowServices(true)}
@@ -58,7 +58,7 @@ export const Header = () => {
           <input type="text" placeholder="SEND US YOUR EMAIL" />
           <div className="input-arrow">{angleArrow}</div>
         </section>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
