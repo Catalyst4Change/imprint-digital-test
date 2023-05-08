@@ -12,7 +12,21 @@ code {
     monospace;
 }
 
+/* global attributes */
+
+.distribute {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.test {
+  border: 1px red dashed;
+  filter: invert(1);
 }

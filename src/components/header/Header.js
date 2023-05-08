@@ -2,12 +2,13 @@ import React from "react";
 import angleArrow from "../../Assets/Pop Out Arrow";
 import ImprintDigitalLogo from "../../Assets/ImprintDigitalLogo";
 import "./Header.scss";
+import "../../index.css";
 
 export const Header = () => {
   return (
     <section id="header">
       {ImprintDigitalLogo}
-      <nav>
+      <nav className="">
         <button class="nav-item">
           Services <div class="arrow-down" />
         </button>
