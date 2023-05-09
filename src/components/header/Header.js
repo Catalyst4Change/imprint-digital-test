@@ -11,34 +11,34 @@ export const Header = () => {
       <nav>
         <div className="nav-item logo">{ImprintDigitalLogo}</div>
         <button
-          class="nav-item services"
+          className="nav-item services"
           onMouseEnter={() => setShowServices(true)}
           onMouseLeave={() => setShowServices(false)}
         >
-          Services <div class="arrow-down" />
+          Services <div className="arrow-down" />
         </button>
-        <button class="nav-item">
-          Case Studies <div class="arrow-down" />
+        <button className="nav-item">
+          Case Studies <div className="arrow-down" />
         </button>
-        <button class="nav-item">
-          About <div class="arrow-down" />
+        <button className="nav-item">
+          About <div className="arrow-down" />
         </button>
-        <button class="nav-item">
-          Blog <div class="arrow-down" />
+        <button className="nav-item">
+          Blog <div className="arrow-down" />
         </button>
-        <button class="nav-item">
-          Resources <div class="arrow-down" />
+        <button className="nav-item">
+          Resources <div className="arrow-down" />
         </button>
-        <button class="nav-item boxed">Contact {angleArrow}</button>
-        {/* <button class="nav-item drop-down"></button> */}
+        <button className="nav-item boxed">Contact {angleArrow}</button>
+        {/* <button className="nav-item drop-down"></button> */}
       </nav>
       <section
         id="dropdown"
-        class={`${showServices ? "visible" : "invisible"}`}
+        className={`${showServices ? "visible" : "invisible"}`}
         onMouseEnter={() => setShowServices(true)}
         onMouseLeave={() => setShowServices(false)}
       >
-        <section class="dropdown-section left">
+        <section className="dropdown-section left">
           <h4 className="title">CMO SERVICES</h4>
           <ul className="service-list">
             <li>Vision and Strategy</li>
@@ -48,10 +48,14 @@ export const Header = () => {
           </ul>
         </section>
         <div className="vert-line" />
-        <section class="dropdown-section center">{ImprintDigitalLogo}</section>
-        <section class="dropdown-section center">{ImprintDigitalLogo}</section>
+        <section className="dropdown-section center">
+          {ImprintDigitalLogo}
+        </section>
+        <section className="dropdown-section center">
+          {ImprintDigitalLogo}
+        </section>
         <div className="vert-line" />
-        <section class="dropdown-section right">
+        <section className="dropdown-section right">
           <h3>
             Know more about what a Fractional CMO can do for your business
           </h3>
