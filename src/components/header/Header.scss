@@ -2,24 +2,25 @@
 
 #header {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 30px;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
   align-items: center;
   margin: 2em auto;
 
   nav {
-    width: 100%;
+    width: 80%;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
-    button {
-      all: unset;
-    }
     .nav-item {
+      all: unset;
+      background-color: white;
+      border: none;
+      white-space: nowrap;
       color: $primary-color;
       text-transform: uppercase;
       font-weight: 600;
@@ -49,19 +50,21 @@
     .logo {
       margin-right: 20%;
     }
-    .boxed {
+    .contact-button {
       width: 105px;
+      height: fit-content;
       border: 1px black solid;
-      padding: 4px 10px;
       font-weight: 400;
       border-radius: 4px;
       color: black;
       background-color: white;
+      padding: 5px 10px;
 
       display: inline-flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+
       &:hover {
         filter: invert(1);
         border: 1px white solid;
