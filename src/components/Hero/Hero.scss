@@ -1,11 +1,14 @@
 @import "../../index.scss";
 
 #hero {
+  position: relative;
   width: 80%;
-  margin: auto;
+  margin: 5% auto;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 
   .hero-copy {
     display: flex;
@@ -13,7 +16,7 @@
     justify-content: center;
     h1 {
       color: $primary-color;
-      font-size: 5vw;
+      font-size: 4vw;
       text-transform: uppercase;
     }
     .hero-text {
