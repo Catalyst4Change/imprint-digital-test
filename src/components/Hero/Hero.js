@@ -86,6 +86,7 @@ export const Hero = ({ windowWidth }) => {
         }}
       ></div>
 
+      {/* hero content */}
       <div className="hero-copy">
         <h1 className="hero-title">Digital Marketing Solutions That Work</h1>
         <p className="hero-text">
