@@ -4,52 +4,37 @@ import ImprintDigitalLogo from "../../Assets/ImprintDigitalLogo";
 import "./Header.scss";
 import { Menu } from "./Menu/Menu";
 
-export const Header = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
+export const Header = ({ windowWidth }) => {
   const [showServices, setShowServices] = useState(false);
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    handleResize();
-  }, []);
-
-  window.addEventListener("resize", handleResize);
 
   return (
     <main id="header">
-      <nav>
-        <div className="nav-item logo">{ImprintDigitalLogo}</div>
-        {windowWidth > 700 ? (
-          <>
-            <button
-              className="nav-item services"
-              onMouseEnter={() => setShowServices(true)}
-              onMouseLeave={() => setShowServices(false)}
-            >
-              Services <div className="arrow-down" />
-            </button>
-            <button className="nav-item">
-              Case Studies <div className="arrow-down" />
-            </button>
-            <button className="nav-item">
-              About <div className="arrow-down" />
-            </button>
-            <button className="nav-item">
-              Blog <div className="arrow-down" />
-            </button>
-            <button className="nav-item">
-              Resources <div className="arrow-down" />
-            </button>
-            <button className="nav-item contact-button">
-              Contact {angleArrow}
-            </button>
-          </>
-        ) : (
-          <Menu />
-        )}
+      <nav className={`${windowWidth > 900 ? "horizontal" : "vertical"}`}>
+        <div className="logo">{ImprintDigitalLogo}</div>
+        <div className="items">
+          <button
+            className="nav-item services"
+            onMouseEnter={() => setShowServices(true)}
+            onMouseLeave={() => setShowServices(false)}
+          >
+            Services <div className="arrow-down" />
+          </button>
+          <button className="nav-item">
+            Case Studies <div className="arrow-down" />
+          </button>
+          <button className="nav-item">
+            About <div className="arrow-down" />
+          </button>
+          <button className="nav-item">
+            Blog <div className="arrow-down" />
+          </button>
+          <button className="nav-item">
+            Resources <div className="arrow-down" />
+          </button>
+          <button className="nav-item contact-button">
+            Contact {angleArrow}
+          </button>
+        </div>
       </nav>
 
       <section

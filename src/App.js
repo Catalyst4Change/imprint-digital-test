@@ -20,7 +20,7 @@ function App() {
   return (
     <main className="App">
       <header>
-        <Header />
+        <Header windowWidth={windowWidth} />
       </header>
       <Hero windowWidth={windowWidth} />
       {/* <PlusBackground /> */}
