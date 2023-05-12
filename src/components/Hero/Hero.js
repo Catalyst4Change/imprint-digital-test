@@ -17,74 +17,74 @@ export const Hero = ({ windowWidth }) => {
         windowWidth > 700 ? "horizontal" : "vertical"
       }`}
     >
-      {/* top left cross */}
-      <div
+      {/* top-left cross */}
+      <svg
+        class="svg-element"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
         style={{
-          ...line,
+          position: "absolute",
           top: 0,
           left: 0,
-          transform: "translateX(-50%)",
+          transform: "translate(-50%, -50%)",
         }}
-      ></div>
-      <div
+      >
+        <rect x="9" y="0" width="2" height="20" fill="lightgrey" />
+        <rect x="0" y="9" width="20" height="2" fill="lightgrey" />
+      </svg>
+      {/* top-right cross */}
+      <svg
+        class="svg-element"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
         style={{
-          ...line,
-          top: 0,
-          left: 0,
-          transform: "translateX(-50%) rotate(90deg)",
-        }}
-      ></div>
-      {/* top right cross */}
-      <div
-        style={{
-          ...line,
-          top: 0,
-          right: 0,
-          transform: "translateX(50%)",
-        }}
-      ></div>
-      <div
-        style={{
-          ...line,
+          position: "absolute",
           top: 0,
           right: 0,
-          transform: "translateX(50%) rotate(90deg)",
+          transform: "translate(50%, -50%)",
         }}
-      ></div>
-      {/* bottom right cross */}
-      <div
+      >
+        <rect x="9" y="0" width="2" height="20" fill="lightgrey" />
+        <rect x="0" y="9" width="20" height="2" fill="lightgrey" />
+      </svg>
+      {/* bottom-right cross */}
+      <svg
+        class="svg-element"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
         style={{
-          ...line,
+          position: "absolute",
           bottom: 0,
           right: 0,
-          transform: "translateX(50%)",
+          transform: "translate(50%, 50%)",
         }}
-      ></div>
-      <div
+      >
+        <rect x="9" y="0" width="2" height="20" fill="lightgrey" />
+        <rect x="0" y="9" width="20" height="2" fill="lightgrey" />
+      </svg>
+      {/* bottom-left cross */}
+      <svg
+        class="svg-element"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
         style={{
-          ...line,
-          bottom: 0,
-          right: 0,
-          transform: "translateX(50%) rotate(90deg)",
-        }}
-      ></div>
-      {/* top left cross */}
-      <div
-        style={{
-          ...line,
-          bottom: 0,
-          left: 0,
-          transform: "translateX(-50%)",
-        }}
-      ></div>
-      <div
-        style={{
-          ...line,
+          position: "absolute",
           bottom: 0,
           left: 0,
-          transform: "translateX(-50%) rotate(90deg)",
+          transform: "translate(-50%, 50%)",
         }}
-      ></div>
+      >
+        <rect x="9" y="0" width="2" height="20" fill="lightgrey" />
+        <rect x="0" y="9" width="20" height="2" fill="lightgrey" />
+      </svg>
 
       {/* hero content */}
       <div className="hero-copy">

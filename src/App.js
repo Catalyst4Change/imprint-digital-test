@@ -4,6 +4,7 @@ import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import PlusBackground from "./components/design/PlusBackground.js";
 import { ConsultButton } from "./components/ConsultButton/ConsultButton";
+import { HornsModule } from "./HornsModule/HornsModule";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -26,6 +27,7 @@ function App() {
       <Hero windowWidth={windowWidth} />
       {/* <PlusBackground /> */}
       <ConsultButton />
+      <HornsModule />
     </main>
   );
 }
