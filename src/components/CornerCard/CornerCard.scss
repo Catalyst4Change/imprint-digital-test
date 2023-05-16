@@ -6,7 +6,8 @@
   display: flex;
   z-index: 1;
   transition: all 0.25s ease-in-out;
-
+  clip-path: polygon(13% 0%, 100% 0, 100% 100%, 0 100%, 0% 16%);
+  // background-color: lime;
   .card-text {
     pointer-events: none;
     width: 75%;

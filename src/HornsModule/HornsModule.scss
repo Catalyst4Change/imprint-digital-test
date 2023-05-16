@@ -26,4 +26,15 @@
       flex-direction: column;
     }
   }
+  .horns-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .footer-text {
+      text-transform: uppercase;
+      color: #e11f26;
+      margin: 1%;
+    }
+  }
 }
