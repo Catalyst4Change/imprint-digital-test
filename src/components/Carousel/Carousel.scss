@@ -1,42 +1,9 @@
 .carousel-container {
   position: relative;
-  width: 350px;
-  height: 300px;
-  .carousel-item {
-    .grey-flags {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-    .clipped-image {
-      width: 95%;
-      height: auto;
-      -webkit-clip-path: polygon(10% 0, 100% 0, 100% 90.5%, 0 90.5%, 0 10%);
-      clip-path: polygon(10% 0, 100% 0, 100% 80.35%, 0 80.35%, 0 10%);
-      -o-object-fit: fill;
-      object-fit: fill;
-    }
-    .title-bar {
-      text-transform: uppercase;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: white;
-      z-index: 5;
-      font-weight: 200;
-      padding: 0;
-      margin: 0;
-    }
-    .title-text {
-      font-size: 1.3em;
-      font-weight: 300;
-      text-transform: uppercase;
-      margin: 1.5% 3%;
-      color: white;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 5;
-    }
-  }
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

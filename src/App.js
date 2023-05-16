@@ -19,6 +19,21 @@ function App() {
 
   window.addEventListener("resize", handleResize);
 
+  const carouselItems = [
+    {
+      title: "startups",
+      imgURL: "https://picsum.photos/200",
+    },
+    {
+      title: "ecommerce",
+      imgURL: "https://picsum.photos/200",
+    },
+    {
+      title: "growth stage",
+      imgURL: "https://picsum.photos/200",
+    },
+  ];
+
   return (
     <main className="App">
       <header>
@@ -28,7 +43,7 @@ function App() {
       {/* <PlusBackground /> */}
       <BigRedButton text={"Get your free consultation"} location={""} />
       <HornsModule windowWidth={windowWidth} />
-      <Carousel title={"Startups"} imgURL={"https://picsum.photos/700"} />
+      <Carousel items={carouselItems} />
     </main>
   );
 }
