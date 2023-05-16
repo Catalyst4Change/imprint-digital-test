@@ -1,0 +1,28 @@
+.carousel-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  .carousel-inner {
+    transition: all 0.5s ease-in-out;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+.buttons {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  .carousel-button {
+    all: unset;
+    background-color: lime;
+    &.right {
+      transform: scaleX(-1);
+    }
+  }
+}

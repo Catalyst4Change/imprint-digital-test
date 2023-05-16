@@ -4,7 +4,7 @@ import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
 import { HornsModule } from "./HornsModule/HornsModule";
 import { BigRedButton } from "./components/BigRedButton/BigRedButton";
-import { Carousel } from "./components/Carousel/Carousel";
+import { CarouselContainer } from "./components/CarouselContainer/CarouselContainer";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -19,7 +19,7 @@ function App() {
 
   window.addEventListener("resize", handleResize);
 
-  const carouselItems = [
+  const [carouselItems, setCarouselItems] = useState([
     {
       title: "startups",
       imgURL: "https://picsum.photos/200",
@@ -32,7 +32,19 @@ function App() {
       title: "growth stage",
       imgURL: "https://picsum.photos/200",
     },
-  ];
+    {
+      title: "startups2",
+      imgURL: "https://picsum.photos/200",
+    },
+    {
+      title: "ecommerce2",
+      imgURL: "https://picsum.photos/200",
+    },
+    {
+      title: "growth stage2",
+      imgURL: "https://picsum.photos/200",
+    },
+  ]);
 
   return (
     <main className="App">
@@ -43,7 +55,10 @@ function App() {
       {/* <PlusBackground /> */}
       <BigRedButton text={"Get your free consultation"} location={""} />
       <HornsModule windowWidth={windowWidth} />
-      <Carousel items={carouselItems} />
+      <CarouselContainer
+        carouselItems={carouselItems}
+        setCarouselItems={setCarouselItems}
+      />
     </main>
   );
 }

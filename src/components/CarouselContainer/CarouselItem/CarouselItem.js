@@ -1,9 +1,12 @@
 import React from "react";
 import "./CarouselItem.scss";
 
-export const CarouselItem = ({ title, imgURL }) => {
+export const CarouselItem = ({ width, margin, title, imgURL }) => {
   return (
-    <div class="carousel-item">
+    <div
+      className="carousel-item"
+      style={{ width: `${width}px`, marginRight: `${margin}px` }}
+    >
       <svg
         className="grey-flags"
         width="36"
