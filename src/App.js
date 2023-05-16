@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
-import PlusBackground from "./components/design/PlusBackground.js";
-import { ConsultButton } from "./components/ConsultButton/ConsultButton";
 import { HornsModule } from "./HornsModule/HornsModule";
+import { BigRedButton } from "./components/BigRedButton/BigRedButton";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -26,7 +25,7 @@ function App() {
       </header>
       <Hero windowWidth={windowWidth} />
       {/* <PlusBackground /> */}
-      <ConsultButton />
+      <BigRedButton text={"Get your free consultation"} location={""} />{" "}
       <HornsModule windowWidth={windowWidth} />
     </main>
   );

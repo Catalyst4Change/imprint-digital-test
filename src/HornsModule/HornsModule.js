@@ -24,7 +24,7 @@ export const HornsModule = ({ windowWidth }) => {
 
   const generateCards = () => {
     return cards.map((card) => {
-      return <CornerCard card={card} />;
+      return <CornerCard key={card.title} card={card} />;
     });
   };
 
@@ -46,6 +46,7 @@ export const HornsModule = ({ windowWidth }) => {
       >
         {generateCards()}
       </section>
+      <h4>Hire your new CMO</h4>
     </main>
   );
 };

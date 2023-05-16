@@ -35,7 +35,7 @@ export const Hero = ({ windowWidth }) => {
       </div>
       {/* bottom-left cross */}
       <div
-        class="bottom-left-cross"
+        className="bottom-left-cross"
         style={{
           position: "absolute",
           bottom: 0,
@@ -47,7 +47,7 @@ export const Hero = ({ windowWidth }) => {
       </div>
       {/* bottom-right cross */}
       <div
-        class="bottom-left-cross"
+        className="bottom-left-cross"
         style={{
           position: "absolute",
           bottom: 0,
