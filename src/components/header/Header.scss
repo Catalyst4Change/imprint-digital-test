@@ -7,7 +7,7 @@
   margin: 10px auto 1% auto;
 
   nav {
-    width: 80%;
+    width: 90%;
     min-width: min-content;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@
     &.horizontal {
       flex-direction: row;
       .logo {
-        margin-right: 2%;
+        margin-right: 10%;
       }
     }
     &.vertical {

@@ -27,7 +27,7 @@ function App() {
       <Hero windowWidth={windowWidth} />
       {/* <PlusBackground /> */}
       <ConsultButton />
-      <HornsModule />
+      <HornsModule windowWidth={windowWidth} />
     </main>
   );
 }

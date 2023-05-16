@@ -1,0 +1,10 @@
+.main-box {
+  fill: white;
+  stroke: #c3c3c3;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    fill: black;
+    stroke: #e11f26;
+    transition: all 0.25s ease-in-out;
+  }
+}

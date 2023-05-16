@@ -1,10 +1,29 @@
-.horns {
-  z-index: -1;
-  display: block;
-  width: 80%;
-  height: auto;
-  margin: auto;
-}
-.card {
-  background-color: red;
+#horns-module {
+  position: relative;
+  .horns-svg {
+    z-index: -10;
+    width: 80%;
+    height: auto;
+    margin: -5% auto -2% auto;
+  }
+  .title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+
+    &.horizontal {
+      flex-direction: row;
+      align-items: baseline;
+    }
+    &.vertical {
+      flex-direction: column;
+    }
+  }
 }

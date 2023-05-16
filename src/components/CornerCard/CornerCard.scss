@@ -1,32 +1,42 @@
 .corner-card {
   position: relative;
+  width: 350px;
+  height: 300px;
   margin: auto;
-  .angled-greeble {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: #e11f26;
-    clip-path: polygon(80% 0, 100% 0, 0 100%, 0 80%);
+  display: flex;
+  z-index: 1;
+  transition: all 0.25s ease-in-out;
+
+  .card-text {
+    pointer-events: none;
+    width: 75%;
+    margin: auto;
+    .card-title {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 1.4em;
+    }
+    .card-copy {
+      margin: auto;
+      line-height: 18pt;
+    }
   }
-  .angled-line {
-    width: 60px;
-    height: 60px;
+  .background-svg {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #c3c3c3;
-    clip-path: polygon(97% 0, 100% 0, 0 100%, 0 97%);
+    height: 100%;
+    width: 100%;
   }
-  .angled-div {
-    height: 350px;
-    width: 350px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
-    border: 1px #c3c3c3 solid;
+  &:hover {
+    .card-title {
+      color: #e11f26;
+      transition: all 0.25s ease-in-out;
+    }
+    .card-copy {
+      color: white;
+      transition: all 0.25s ease-in-out;
+    }
   }
 }
