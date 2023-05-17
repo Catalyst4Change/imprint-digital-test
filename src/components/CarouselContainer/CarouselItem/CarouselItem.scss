@@ -1,7 +1,6 @@
 .carousel-item {
   position: relative;
-  // width: 345px;
-  height: 300px;
+  height: 100%;
   margin: auto;
 
   .grey-flags {
@@ -21,6 +20,7 @@
   .title-bar {
     text-transform: uppercase;
     position: absolute;
+    transform-origin: 0 100%;
     bottom: 0;
     left: 0;
     color: white;

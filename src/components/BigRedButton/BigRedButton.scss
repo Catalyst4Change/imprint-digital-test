@@ -31,10 +31,12 @@
     fill: white;
     transition: all 0.25s ease-in-out;
   }
+
   &:hover {
-    color: black;
-    background-color: white;
-    transition: all 0.25s ease-in-out;
+    .button-text {
+      color: black;
+      transition: all 0.25s ease-in-out;
+    }
 
     .arrow {
       fill: #e11f26;

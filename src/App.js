@@ -32,18 +32,6 @@ function App() {
       title: "growth stage",
       imgURL: "https://picsum.photos/200",
     },
-    {
-      title: "startups2",
-      imgURL: "https://picsum.photos/200",
-    },
-    {
-      title: "ecommerce2",
-      imgURL: "https://picsum.photos/200",
-    },
-    {
-      title: "growth stage2",
-      imgURL: "https://picsum.photos/200",
-    },
   ]);
 
   return (

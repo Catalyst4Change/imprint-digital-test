@@ -1,17 +1,27 @@
-import React, { children, useState } from "react";
+import React, { children, useEffect, useRef, useState } from "react";
 import "./CarouselContainer.scss";
 import { CarouselItem } from "./CarouselItem/CarouselItem";
+import { arrow } from "../../Assets/SimpleArrow";
 
 // component takes in an array of objects
 // { title: string, imgURL: string}
 
-export const CarouselContainer = ({ carouselItems }) => {
-  const [carouselIndex, setCarouselIndex] = useState(0);
-  const [itemWidth] = useState(345);
-  const [itemMargin] = useState(20);
-  const [touchPosition, setTouchPosition] = useState(null);
+/* 
+note: the width and margin of the carousel items 
+are integral to the calculation of the carousel. 
+do not change these attributes in CSS or you will 
+break the flow
+*/
 
-  const carouselShift = itemWidth + itemMargin;
+export const CarouselContainer = ({ carouselItems }) => {
+  const [carouselIndex, setCarouselIndex] = useState(1);
+  const [carouselLength] = useState(carouselItems.length);
+  const [itemWidth] = useState(345);
+  const [itemMargin] = useState(75);
+  const [carouselShift] = useState(itemWidth + itemMargin);
+  const [touchPosition, setTouchPosition] = useState(null);
+  const [transition, setTransition] = useState("all 0.5s ease-in-out");
+  const [transform, setTransform] = useState(-carouselShift);
 
   const displayCarouselItems = () => {
     return carouselItems.map((item, i) => {
@@ -44,63 +54,91 @@ export const CarouselContainer = ({ carouselItems }) => {
     const diff = touchDown - currentTouch;
 
     if (diff > 5) {
-      retardCarouselIndex();
-    } else if (diff < -5) {
       advanceCarouselIndex();
+    } else if (diff < -5) {
+      retardCarouselIndex();
     }
 
     setTouchPosition(null);
   };
 
+  // handle carousel index
+
   const advanceCarouselIndex = () => {
-    setCarouselIndex((carouselIndex) => carouselIndex + 1);
+    const newTransform = carouselShift * (carouselIndex + 1);
+    const newIndex = carouselIndex + 1;
+    setCarouselIndex(newIndex);
+    setTransform(-newTransform);
   };
 
   const retardCarouselIndex = () => {
-    setCarouselIndex((carouselIndex) => carouselIndex - 1);
+    const newTransform = carouselShift * (carouselIndex - 1);
+    const newIndex = carouselIndex - 1;
+    setCarouselIndex(newIndex);
+    setTransform(-newTransform);
   };
 
-  const arrow = () => {
-    return (
-      <svg
-        width="52"
-        height="24"
-        viewBox="0 0 52 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807611 12.0208 0.807611 12.6066 1.3934C13.1924 1.97919 13.1924 2.92893 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM52 13.5H2V10.5H52V13.5Z"
-          fill="black"
-        />
-      </svg>
-    );
+  // handle end of carousel
+  const handleTransitionEnd = () => {
+    if (carouselIndex === 0) {
+      console.log(-(carouselShift * carouselLength));
+      setTransition("none");
+      setTransform(-carouselShift * carouselLength);
+      setCarouselIndex(carouselLength);
+    } else if (carouselIndex === carouselLength) {
+      setTransition("none");
+      setTransform(0);
+      setCarouselIndex(0);
+    }
+    setTimeout(() => {
+      setTransition("all 0.5s ease-in-out");
+    }, 100);
   };
+
+  const loopCarouselLeft = () => {
+    let output = [];
+    output.push(displayCarouselItems());
+    return output;
+  };
+
+  const loopCarouselRight = () => {
+    let output = [];
+    output.push(displayCarouselItems());
+    return output;
+  };
+
   return (
-    <>
+    <div
+      className="carousel-container"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
+      <h2 class="title">
+        who we <span>serve</span>
+      </h2>
       <div
-        className="carousel-container test"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
+        className="carousel-inner"
+        style={{
+          transform: `translateX(${transform}px)`,
+          transition: transition,
+        }}
+        onTransitionEnd={() => handleTransitionEnd()}
       >
-        {"carouselIndex : "} {carouselIndex}
-        <div
-          className="carousel-inner"
-          style={{
-            transform: `translateX(${carouselIndex * carouselShift}px)`,
-          }}
+        {loopCarouselLeft()}
+        {displayCarouselItems()}
+        {loopCarouselRight()}
+      </div>
+      <div className="buttons-container">
+        <button className="carousel-button" onClick={retardCarouselIndex}>
+          {arrow()}
+        </button>
+        <button
+          className="carousel-button right"
+          onClick={advanceCarouselIndex}
         >
-          {displayCarouselItems()}{" "}
-        </div>
-      </div>
-      <div className="buttons">
-        <button className="carousel-button" onClick={advanceCarouselIndex}>
-          {arrow()}
-        </button>
-        <button className="carousel-button right" onClick={retardCarouselIndex}>
           {arrow()}
         </button>
       </div>
-    </>
+    </div>
   );
 };

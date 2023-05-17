@@ -8,7 +8,7 @@ export const CarouselItem = ({ width, margin, title, imgURL }) => {
       style={{ width: `${width}px`, marginRight: `${margin}px` }}
     >
       <svg
-        className="grey-flags"
+        className="grey-flags "
         width="36"
         height="91"
         viewBox="0 0 36 91"
