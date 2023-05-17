@@ -1,0 +1,37 @@
+#mobile-menu {
+  .main-menu-button {
+    all: unset;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dialog-container {
+    right: 0;
+    .menu-selector {
+      position: absolute;
+      top: 0;
+      border: none;
+      &::backdrop {
+        backdrop-filter: blur(5px);
+      }
+
+      .menu-close-button {
+        all: unset;
+        color: red;
+      }
+      .title {
+        text-align: center;
+        pointer-events: none;
+      }
+      .menu-option {
+        font-size: 2em;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline red;
+        }
+      }
+    }
+  }
+}

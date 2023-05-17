@@ -1,7 +1,7 @@
 import React, { children, useEffect, useRef, useState } from "react";
 import "./CarouselContainer.scss";
 import { CarouselItem } from "./CarouselItem/CarouselItem";
-import { arrow } from "../../Assets/SimpleArrow";
+import arrow from "../../Assets/SimpleArrow";
 
 // component takes in an array of objects
 // { title: string, imgURL: string}
@@ -113,7 +113,7 @@ export const CarouselContainer = ({ carouselItems }) => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
-      <h2 class="title">
+      <h2 className="title">
         who we <span>serve</span>
       </h2>
       <div
@@ -130,13 +130,13 @@ export const CarouselContainer = ({ carouselItems }) => {
       </div>
       <div className="buttons-container">
         <button className="carousel-button" onClick={retardCarouselIndex}>
-          {arrow()}
+          {arrow}
         </button>
         <button
           className="carousel-button right"
           onClick={advanceCarouselIndex}
         >
-          {arrow()}
+          {arrow}
         </button>
       </div>
     </div>
