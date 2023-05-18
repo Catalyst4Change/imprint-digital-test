@@ -5,6 +5,9 @@ import { Hero } from "./components/Hero/Hero";
 import { HornsModule } from "./HornsModule/HornsModule";
 import { BigRedButton } from "./components/BigRedButton/BigRedButton";
 import { CarouselContainer } from "./components/CarouselContainer/CarouselContainer";
+import startupsImage from "./Assets/images/Startups Thumb.jpg";
+import eCommerceImage from "./Assets/images/Ecommerce Thumb.jpg";
+import growthStageImage from "./Assets/images/Growth Thumb.jpg";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -22,15 +25,15 @@ function App() {
   const [carouselItems, setCarouselItems] = useState([
     {
       title: "startups",
-      imgURL: "https://picsum.photos/200",
+      imgURL: startupsImage,
     },
     {
       title: "ecommerce",
-      imgURL: "https://picsum.photos/200",
+      imgURL: eCommerceImage,
     },
     {
       title: "growth stage",
-      imgURL: "https://picsum.photos/200",
+      imgURL: growthStageImage,
     },
   ]);
 

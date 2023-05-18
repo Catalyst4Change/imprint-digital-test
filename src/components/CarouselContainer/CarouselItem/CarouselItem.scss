@@ -11,9 +11,8 @@
   }
   .clipped-image {
     width: 96%;
-    height: auto;
-    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 90.5%, 0 90.5%, 0 10%);
-    clip-path: polygon(10% 0, 100% 0, 100% 80.7%, 0 80.7%, 0 10%);
+    -webkit-clip-path: polygon(40px 0, 100% 0, 100% 267.5px, 0 267.5px, 0 40px);
+    clip-path: polygon(40px 0, 100% 0, 100% 267.5px, 0 267.5px, 0 40px);
     -o-object-fit: fill;
     object-fit: fill;
   }
