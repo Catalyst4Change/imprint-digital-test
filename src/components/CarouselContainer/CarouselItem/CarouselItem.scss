@@ -1,14 +1,26 @@
+$transition-time: 0.25s;
+
 .carousel-item {
   position: relative;
   height: 100%;
   margin: auto;
-  transition: all 0.25s ease-in-out;
+  transition: all $transition-time ease-in-out;
 
   .grey-flags {
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
+    svg {
+      fill: #c0c0c0;
+      transition: all $transition-time ease-in-out;
+    }
+    &.hovered {
+      svg {
+        fill: black;
+        transition: all $transition-time ease-in-out;
+      }
+    }
   }
   .clipped-image {
     width: 96%;
@@ -47,7 +59,7 @@
     height: 70%;
     width: 96%;
     content: "";
-    transition: all 0.25s ease-in-out;
+    transition: all $transition-time ease-in-out;
     opacity: 0;
   }
   &:hover {
