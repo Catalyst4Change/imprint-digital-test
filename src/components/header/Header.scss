@@ -63,26 +63,6 @@
           }
         }
       }
-      .contact-button {
-        width: 105px;
-        height: fit-content;
-        border: 1px black solid;
-        font-weight: 400;
-        border-radius: 4px;
-        color: black;
-        background-color: white;
-        padding: 5px 10px;
-
-        display: inline-flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        &:hover {
-          filter: invert(1);
-          border: 1px white solid;
-        }
-      }
     }
   }
   #dropdown {
@@ -141,5 +121,34 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    .left-side {
+    }
+    .right-side {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .contact-button {
+    width: 105px;
+    height: fit-content;
+    border: 1px black solid;
+    font-weight: 400;
+    border-radius: 4px;
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    text-transform: uppercase;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      filter: invert(1);
+      border: 1px white solid;
+    }
   }
 }

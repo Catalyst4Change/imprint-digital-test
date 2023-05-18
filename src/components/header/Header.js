@@ -32,15 +32,16 @@ export const Header = ({ windowWidth }) => {
             <button className="nav-item">
               Resources <div className="arrow-down" />
             </button>
-            <button className="nav-item contact-button">
-              Contact {angleArrow}
-            </button>
+            <button className="contact-button">Contact {angleArrow}</button>
           </div>
         </nav>
       ) : (
         <div className="mobile-menu">
-          <div className="logo">{ImprintDigitalLogo}</div>
-          <MobileMenu />
+          <div className="logo left-side">{ImprintDigitalLogo}</div>
+          <div className="right-side">
+            <button className="contact-button">Contact {angleArrow}</button>
+            <MobileMenu />
+          </div>
         </div>
       )}
     </main>
