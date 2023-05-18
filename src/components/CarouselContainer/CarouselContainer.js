@@ -1,7 +1,7 @@
 import React, { children, useEffect, useRef, useState } from "react";
 import "./CarouselContainer.scss";
 import { CarouselItem } from "./CarouselItem/CarouselItem";
-import arrow from "../../Assets/SimpleArrow";
+import arrow from "../../Assets/BlackArrow";
 
 // component takes in an array of objects
 // { title: string, imgURL: string}

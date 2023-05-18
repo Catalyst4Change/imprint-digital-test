@@ -11,52 +11,10 @@ export const Hero = ({ windowWidth }) => {
         windowWidth > 700 ? "horizontal" : "vertical"
       }`}
     >
-      {/* top-left cross */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-        {HeroCross}
-      </div>
-      {/* top-right cross */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          transform: "translate(50%, -50%)",
-        }}
-      >
-        {HeroCross}
-      </div>
-      {/* bottom-left cross */}
-      <div
-        className="bottom-left-cross"
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          transform: "translate(-50%, 50%)",
-        }}
-      >
-        {HeroCross}
-      </div>
-      {/* bottom-right cross */}
-      <div
-        className="bottom-left-cross"
-        style={{
-          position: "absolute",
-          bottom: 0,
-          right: 0,
-          transform: "translate(50%, 50%)",
-        }}
-      >
-        {HeroCross}
-      </div>
+      <div className="top-left-cross">{HeroCross}</div>
+      <div className="top-right-cross">{HeroCross}</div>
+      <div className="bottom-left-cross">{HeroCross}</div>
+      <div className="bottom-right-cross">{HeroCross}</div>
 
       {/* hero content */}
       <div className="hero-copy ">

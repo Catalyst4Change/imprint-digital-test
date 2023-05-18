@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./CornerCard.scss";
-import { CornerCardBackground } from "./CornerCardBackground/CornerCardBackground";
+import { CornerCardBackground } from "./CornerCardBackground/CornerCardBackground.svg";
 
 // component takes in props of card
 // card: { title: string, copy: string }

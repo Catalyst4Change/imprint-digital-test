@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./MobileMenu.scss";
-import hamMenu from "./Hamburger";
+import hamMenu from "./Hamburger.svg";
 
 export const MobileMenu = () => {
   const menuModal = useRef(null);

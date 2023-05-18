@@ -1,6 +1,6 @@
 import React from "react";
 import "./BigRedButton.scss";
-import arrow from "./ExitArrow";
+import arrow from "../../Assets/Arrow.svg";
 
 // text is presented on button
 // location is link href

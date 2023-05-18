@@ -31,10 +31,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     .footer-text {
       text-transform: uppercase;
       color: #e11f26;
       margin: 1%;
+    }
+    .arrow {
+      svg {
+        height: 15px;
+        fill: #e11f26;
+      }
     }
   }
 }
