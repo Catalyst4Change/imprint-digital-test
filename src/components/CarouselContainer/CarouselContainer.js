@@ -1,4 +1,4 @@
-import React, { children, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "./CarouselContainer.scss";
 import { CarouselItem } from "./CarouselItem/CarouselItem";
 import arrow from "../../Assets/BlackArrow";

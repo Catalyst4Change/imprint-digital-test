@@ -11,7 +11,7 @@ export const CarouselItem = ({ width, margin, title, imgURL }) => {
     >
       <div className="grey-flags"> {greyFlags} </div>
       <div className="title-bar"> {redBar}</div>
-      <img className="clipped-image" src={imgURL} />
+      <img className="clipped-image" src={imgURL} alt={title} />
       <span className="title-text">{title}</span>
       <div className="gradient-overlay"></div>
     </div>
