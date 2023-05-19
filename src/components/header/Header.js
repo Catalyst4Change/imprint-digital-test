@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import angleArrow from "../../Assets/Pop Out Arrow";
 import ImprintDigitalLogo from "../../Assets/ImprintDigitalLogo";
+import ImprintDigitalIcon from "../../Assets/cropped-imprint-favicon-6 1.png";
 import "./Header.scss";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 import YardHouse from "../../Assets/images/YardHouseCreations.png";
@@ -87,8 +88,13 @@ export const Header = ({ windowWidth }) => {
           </section>
         </div>
       ) : (
+        // mobile menu
         <nav className="mobile-menu">
-          <div className="logo left-side">{ImprintDigitalLogo}</div>
+          <img
+            src={ImprintDigitalIcon}
+            className="logo left-side"
+            alt="Imprint Digital Icon"
+          />
           <div className="right-side">
             <button className="contact-button">Contact {angleArrow}</button>
             <div className="mobile-menu-container">
