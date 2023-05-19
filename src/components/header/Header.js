@@ -9,7 +9,7 @@ import arrow from "../../Assets/Arrow.svg";
 export const Header = ({ windowWidth }) => {
   // logic directly applies className to #dropdown
   const [showServices, setShowServices] = useState("");
-  const [breakpoint] = useState(800);
+  const [breakpoint] = useState(850);
 
   return (
     <main id="header">
@@ -91,7 +91,9 @@ export const Header = ({ windowWidth }) => {
           <div className="logo left-side">{ImprintDigitalLogo}</div>
           <div className="right-side">
             <button className="contact-button">Contact {angleArrow}</button>
-            <MobileMenu />
+            <div className="mobile-menu-container">
+              <MobileMenu />
+            </div>
           </div>
         </nav>
       )}
