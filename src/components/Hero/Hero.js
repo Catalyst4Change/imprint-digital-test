@@ -7,17 +7,10 @@ export const Hero = ({ windowWidth }) => {
   return (
     <main
       id="hero"
-      className={`plus-element ${
-        windowWidth > 700 ? "horizontal" : "vertical"
-      }`}
+      className={`${windowWidth > 700 ? "horizontal" : "vertical"}`}
     >
-      <div className="top-left-cross">{HeroCross}</div>
-      <div className="top-right-cross">{HeroCross}</div>
-      <div className="bottom-left-cross">{HeroCross}</div>
-      <div className="bottom-right-cross">{HeroCross}</div>
-
       {/* hero content */}
-      <div className="hero-copy ">
+      <div className="hero-copy">
         <h1 className="hero-title">Digital Marketing Solutions That Work</h1>
         <p className="hero-text">
           Stop getting burned by digital marketing companies.
@@ -25,11 +18,18 @@ export const Hero = ({ windowWidth }) => {
           Your digital marketing partner that ensures your brand thrives.
         </p>
       </div>
-      <img
-        src={bullRocket}
-        alt="NASA rocket taking off inside the silhouette of a bull"
-        className="hero-image"
-      />
+      <div className="hero-image-container">
+        <img
+          className="hero-image"
+          src={bullRocket}
+          alt="NASA rocket taking off inside the silhouette of a bull"
+        />
+      </div>
+
+      <div className="top-left-cross">{HeroCross}</div>
+      <div className="top-right-cross">{HeroCross}</div>
+      <div className="bottom-left-cross">{HeroCross}</div>
+      <div className="bottom-right-cross">{HeroCross}</div>
     </main>
   );
 };

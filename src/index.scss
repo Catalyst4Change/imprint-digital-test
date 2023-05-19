@@ -1,5 +1,7 @@
 $primary-color: #de1f26;
-
+* {
+  box-sizing: border-box;
+}
 // prevent horizontal scrolling
 html,
 body {
