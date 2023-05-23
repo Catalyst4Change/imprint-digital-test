@@ -11,6 +11,7 @@ import growthStageImage from "./Assets/images/Growth Thumb.jpg";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(0);
+  const [breakpoint] = useState(850);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -40,12 +41,12 @@ function App() {
   return (
     <main className="App">
       <header>
-        <Header windowWidth={windowWidth} />
+        <Header windowWidth={windowWidth} breakpoint={breakpoint} />
       </header>
       <Hero windowWidth={windowWidth} />
       {/* <PlusBackground /> */}
       <BigRedButton text={"Get your free consultation"} location={""} />
-      <HornsModule windowWidth={windowWidth} />
+      <HornsModule windowWidth={windowWidth} breakpoint={breakpoint} />
       <CarouselContainer
         carouselItems={carouselItems}
         setCarouselItems={setCarouselItems}

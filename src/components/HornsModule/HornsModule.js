@@ -7,7 +7,7 @@ import arrow from "../../Assets/Arrow.svg";
 // component takes in props of an array of card objects
 // card: { title: string, copy: string }
 
-export const HornsModule = ({ windowWidth }) => {
+export const HornsModule = ({ windowWidth, breakPoint }) => {
   const cards = [
     {
       title: "Highly Sought Experts",
@@ -33,16 +33,18 @@ export const HornsModule = ({ windowWidth }) => {
     <main id="horns-module">
       <div className="horns-title">
         <h2 className="title">
-          Faster Growth with a{" "}
+          Faster Growth with a
           <span style={{ color: "#E11F26" }}>fractional</span>
           <br />
           chief marketing officer
         </h2>
       </div>
-      <div className="horns-svg">{cyberHorns}</div>
+      {windowWidth > breakPoint && (
+        <div className="horns-svg">{cyberHorns}</div>
+      )}
       <section
         className={`cards-container ${
-          windowWidth > 700 ? "horizontal" : "vertical"
+          windowWidth > breakPoint ? "horizontal" : "vertical"
         }`}
       >
         {generateCards()}

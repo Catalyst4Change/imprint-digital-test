@@ -7,14 +7,13 @@ import { MobileMenu } from "../MobileMenu/MobileMenu";
 import YardHouse from "../../Assets/images/YardHouseCreations.png";
 import arrow from "../../Assets/Arrow.svg";
 
-export const Header = ({ windowWidth }) => {
+export const Header = ({ windowWidth, breakPoint }) => {
   // logic directly applies className to #dropdown
   const [showServices, setShowServices] = useState("");
-  const [breakpoint] = useState(850);
 
   return (
     <main id="header">
-      {windowWidth > breakpoint ? (
+      {windowWidth > breakPoint ? (
         <div className="desktop-menu">
           <nav>
             <div className="logo">{ImprintDigitalLogo}</div>

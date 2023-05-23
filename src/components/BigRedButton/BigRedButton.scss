@@ -5,8 +5,8 @@
   align-items: center;
 
   width: min(600px, 90%);
-  height: 60px;
   margin: 100px auto;
+  padding: 2% 5%;
 
   border: none;
   background: #e11f26;
@@ -16,6 +16,7 @@
   transition: all 0.25s ease-in-out;
 
   .button-text {
+    text-align: left;
     color: white;
     font-size: 2em;
     font-weight: 600;
@@ -30,6 +31,7 @@
     width: 40px;
     margin-left: 15px;
     fill: white;
+    transform: rotate(180deg);
     transition: all 0.25s ease-in-out;
   }
 
