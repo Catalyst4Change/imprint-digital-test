@@ -114,11 +114,6 @@ export const CarouselContainer = ({ carouselItems }) => {
       // onTouchStart={handleTouchStart}
       // onTouchMove={handleTouchMove}
     >
-      carouselIndex: {carouselIndex} <br />
-      touchPosition: {touchPosition} <br />
-      touchPosition: {touchPosition} <br />
-      transition: {transition} <br />
-      transform: {transform}
       <h2 className="title">
         who we <span>serve</span>
       </h2>
