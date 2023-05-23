@@ -89,7 +89,7 @@ export const Header = ({ windowWidth }) => {
         </div>
       ) : (
         // mobile menu
-        <nav className="mobile-menu">
+        <nav className="mobile-menu ">
           <img
             src={ImprintDigitalIcon}
             className="logo left-side"

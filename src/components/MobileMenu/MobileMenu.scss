@@ -1,11 +1,18 @@
 #mobile-menu {
-  .main-menu-button {
-    all: unset;
-    height: 50px;
-    width: 50px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  .hamburger-menu-button {
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    padding: 8px 0 0 0;
+    border: none;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      line {
+        stroke: black;
+      }
+    }
   }
 
   .menu-modal {
@@ -24,8 +31,13 @@
       background-color: white;
       margin-left: auto;
       margin-right: 20%;
+      &:focus {
+        outline: none;
+        color: black;
+      }
 
       .title {
+        color: black;
         font-size: 3em;
         font-weight: 300;
         text-transform: uppercase;
@@ -92,15 +104,16 @@
         text-transform: uppercase;
         font-size: 1.5em;
         border: 1px black solid;
+        color: black;
         background: white;
         border-radius: 5px;
         box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.12);
 
         svg {
           fill: #e11f26;
-          height: 60%;
-          width: 60%;
-          transform: rotate(180deg);
+          height: 30px;
+          width: 30px;
+          transform: rotate(180deg) translateY(-4px);
         }
         &:hover {
           filter: invert(1);

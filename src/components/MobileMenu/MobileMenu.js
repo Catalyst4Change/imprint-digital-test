@@ -17,9 +17,10 @@ export const MobileMenu = () => {
 
   return (
     <main id="mobile-menu">
-      <button onClick={openMenuModal} className="main-menu-button">
+      <button onClick={openMenuModal} className="hamburger-menu-button">
         {hamMenu}
       </button>
+
       <dialog ref={menuModal} className="menu-modal">
         <button onClick={closeMenuModal} className="close-menu-button">
           <span className="title">Menu</span>
