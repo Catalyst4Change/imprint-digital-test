@@ -7,29 +7,106 @@
     justify-content: center;
     align-items: center;
   }
-  .dialog-container {
-    right: 0;
-    .menu-selector {
-      position: absolute;
-      top: 0;
-      border: none;
-      &::backdrop {
-        backdrop-filter: blur(5px);
-      }
 
-      .menu-close-button {
-        all: unset;
-        color: red;
-      }
+  .menu-modal {
+    width: 100%;
+    margin: 3.5% auto;
+    border: none;
+    &::backdrop {
+      backdrop-filter: blur(5px);
+    }
+
+    .close-menu-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      background-color: white;
+      margin-left: auto;
+      margin-right: 20%;
+
       .title {
-        text-align: center;
-        pointer-events: none;
-      }
-      .menu-option {
-        font-size: 2em;
+        font-size: 3em;
+        font-weight: 300;
         text-transform: uppercase;
+      }
+      .arrow-container {
+        margin-left: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          fill: black;
+          height: 25px;
+          transform: rotate(180deg);
+        }
+      }
+      &:hover {
+        color: red;
+        .arrow-container {
+          svg {
+            fill: red;
+          }
+        }
+      }
+    }
+
+    .menu-option {
+      font-size: 2em;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: right;
+
+      &:hover {
+        text-decoration: underline red;
+      }
+    }
+
+    .contact-info {
+      text-align: center;
+      font-weight: 600;
+
+      .logo-container {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 150%;
+          height: 150%;
+        }
+      }
+      .message-us-button {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+
+        width: 90%;
+        height: 60px;
+
+        text-transform: uppercase;
+        font-size: 1.5em;
+        border: 1px black solid;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.12);
+
+        svg {
+          fill: #e11f26;
+          height: 60%;
+          width: 60%;
+          transform: rotate(180deg);
+        }
         &:hover {
-          text-decoration: underline red;
+          filter: invert(1);
+          svg {
+            filter: invert(1);
+          }
         }
       }
     }
