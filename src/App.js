@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
-import { HornsModule } from "./HornsModule/HornsModule";
+import { HornsModule } from "./components/HornsModule/HornsModule";
 import { BigRedButton } from "./components/BigRedButton/BigRedButton";
 import { CarouselContainer } from "./components/CarouselContainer/CarouselContainer";
 import startupsImage from "./Assets/images/Startups Thumb.jpg";

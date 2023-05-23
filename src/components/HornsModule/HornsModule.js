@@ -1,8 +1,8 @@
 import React from "react";
 import "./HornsModule.scss";
-import cyberHorns from "../Assets/Cyber Horns";
-import { CornerCard } from "../components/CornerCard/CornerCard";
-import arrow from "../Assets/Arrow.svg";
+import cyberHorns from "../../Assets/Cyber Horns";
+import { CornerCard } from "../../components/CornerCard/CornerCard";
+import arrow from "../../Assets/Arrow.svg";
 
 // component takes in props of an array of card objects
 // card: { title: string, copy: string }
