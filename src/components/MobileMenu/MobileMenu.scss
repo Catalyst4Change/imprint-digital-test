@@ -29,8 +29,9 @@
       align-items: center;
       border: none;
       background-color: white;
-      margin-left: auto;
-      margin-right: 20%;
+      margin: auto;
+      padding-left: 5vw;
+
       &:focus {
         outline: none;
         color: black;

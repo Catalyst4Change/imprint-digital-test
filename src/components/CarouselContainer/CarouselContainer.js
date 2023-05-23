@@ -16,7 +16,7 @@ break the flow
 export const CarouselContainer = ({ carouselItems }) => {
   const [carouselIndex, setCarouselIndex] = useState(1);
   const [carouselLength] = useState(carouselItems.length);
-  const [itemWidth] = useState(345);
+  const [itemWidth] = useState(330);
   const [itemMargin] = useState(75);
   const [carouselShift] = useState(itemWidth + itemMargin);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -37,30 +37,30 @@ export const CarouselContainer = ({ carouselItems }) => {
     });
   };
 
-  // touch-specific controls
-  const handleTouchStart = (e) => {
-    const touchDown = e.touches[0].clientX;
-    setTouchPosition(touchDown);
-  };
+  //  removed unreliable touch-specific controls
+  // const handleTouchStart = (e) => {
+  //   const touchDown = e.touches[0].clientX;
+  //   setTouchPosition(touchDown);
+  // };
 
-  const handleTouchMove = (e) => {
-    const touchDown = touchPosition;
+  // const handleTouchMove = (e) => {
+  //   const touchDown = touchPosition;
 
-    if (touchDown === null) {
-      return;
-    }
+  //   if (touchDown === null) {
+  //     return;
+  //   }
 
-    const currentTouch = e.touches[0].clientX;
-    const diff = touchDown - currentTouch;
+  //   const currentTouch = e.touches[0].clientX;
+  //   const diff = touchDown - currentTouch;
 
-    if (diff > 5) {
-      advanceCarouselIndex();
-    } else if (diff < -5) {
-      retardCarouselIndex();
-    }
+  //   if (diff > 10) {
+  //     advanceCarouselIndex();
+  //   } else if (diff < -10) {
+  //     retardCarouselIndex();
+  //   }
 
-    setTouchPosition(null);
-  };
+  //   setTouchPosition(null);
+  // };
 
   // handle carousel index
 
@@ -79,6 +79,7 @@ export const CarouselContainer = ({ carouselItems }) => {
   };
 
   // handle end of carousel
+
   const handleTransitionEnd = () => {
     if (carouselIndex === 0) {
       console.log(-(carouselShift * carouselLength));
@@ -110,9 +111,14 @@ export const CarouselContainer = ({ carouselItems }) => {
   return (
     <div
       className="carousel-container"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
+      // onTouchStart={handleTouchStart}
+      // onTouchMove={handleTouchMove}
     >
+      carouselIndex: {carouselIndex} <br />
+      touchPosition: {touchPosition} <br />
+      touchPosition: {touchPosition} <br />
+      transition: {transition} <br />
+      transform: {transform}
       <h2 className="title">
         who we <span>serve</span>
       </h2>

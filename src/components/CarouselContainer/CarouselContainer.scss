@@ -30,6 +30,9 @@
     margin: auto;
     .carousel-button {
       all: unset;
+      svg {
+        fill: black;
+      }
       &.right {
         transform: scaleX(-1);
       }
